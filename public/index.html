@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Best Online Cocktail Servivce in India | mycocktaildb.com</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navbar">
+        <div id="logo">
+          <h1 class="headertitle"><a href="/">TheCockTail</a></h1>
+        </div>
+
+        <ul class="headerbtn">
+          <li class="item"><a href="/" id="homeBtn">Home</a></li>
+          <li class="item">
+            <a href="file:///C:/Users/hp/Desktop/Project%202/public/api.html#"
+              >API</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <section id="home">
+        <h1 class="h-primary">Welcome to TheCocktailDB</h1>
+        <p>
+          An open, crowd-sourced database of drinks and cocktails from around
+          the world.
+        </p>
+        <div>
+          <!-- <form action="/search" method="get"> -->
+          <input
+            id="user-inp"
+            type="text"
+            class="searchText"
+            placeholder="Search for a cocktails"
+          />
+          <button class="btn" id="search-btn">Search</button>
+          <button class="btn" id="search-ing-btn">Search For Ingredient</button>
+          <!-- </form> -->
+        </div>
+
+        <script></script>
+        <div class="fixed-btn1">
+          <a id="randomDrinksBtn"><p>Random Drinks</p></a>
+        </div>
+      </section>
+      <div id="bydefault">
+        <section class="Services-container">
+          <h1 class="h-primary center">Popular Drinks</h1>
+          <div id="services">
+            <div class="box" id="mojito">
+              <img src="image/mojito.jpg" alt="" />
+              <h2 class="h-secondary center">Mojito</h2>
+            </div>
+            <div class="box" id="negroni">
+              <img src="image/negroni.jpg" alt="" />
+              <h2 class="h-secondary center">Negroni</h2>
+            </div>
+            <div class="box" id="whiskey Sour">
+              <img src="image/whiskeysour.jpg" alt="" />
+              <h2 class="h-secondary center">Whiskey Sour</h2>
+            </div>
+            <div class="box" id="Daiquiri">
+              <img src="image/Daiquiri.jpg" alt="" />
+              <h2 class="h-secondary center">Daiquiri</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="Services-container">
+          <h1 class="h-primary center">Popular Ingredients</h1>
+          <div id="services">
+            <div class="box" id="Gin">
+              <img src="image/Gin.png" alt="" />
+              <h2 class="h-secondary center">Gin</h2>
+            </div>
+            <div class="box" id="Vodka">
+              <img src="image/Vodka.png" alt="" />
+              <h2 class="h-secondary center">Vodka</h2>
+            </div>
+            <div class="box" id="Rum">
+              <img src="image/Rum.png" alt="" />
+              <h2 class="h-secondary center">Rum</h2>
+            </div>
+            <div class="box" id="Tequila">
+              <img src="image/Tequila.png" alt="" />
+              <h2 class="h-secondary center">Tequila</h2>
+            </div>
+          </div>
+        </section>
+
+        <section class="Services-container">
+          <h1 class="h-primary center">Latest Drinks</h1>
+          <div id="services">
+            <div class="box">
+              <img src="image/Gin.jpg" alt="" />
+              <h2 class="h-secondary center">Gin Tonic</h2>
+            </div>
+            <div class="box">
+              <img src="image/Vodka Tonic.jpg" alt="" />
+              <h2 class="h-secondary center">Vodka Tonic</h2>
+            </div>
+            <div class="box">
+              <img src="image/Vodka Slime.jpg" alt="" />
+              <h2 class="h-secondary center">Vodka Slime</h2>
+            </div>
+            <div class="box">
+              <img src="image/VodkaLemon.jpg" alt="" />
+              <h2 class="h-secondary center">Vodka Lemon</h2>
+            </div>
+          </div>
+        </section>
+        <section class="Services-container">
+          <h1 class="h-primary center">Random Drinks</h1>
+          <div id="services">
+            <div class="box">
+              <img src="image/Acid.jpg" alt="" />
+              <h2 class="h-secondary center">ACID</h2>
+            </div>
+            <div class="box">
+              <img src="image/ZMA.jpg" alt="" />
+              <h2 class="h-secondary center">Ziemes Martini Apfelsaft</h2>
+            </div>
+            <div class="box">
+              <img src="image/Oreo.jpg" alt="" />
+              <h2 class="h-secondary center">Oreo Mudslide</h2>
+            </div>
+            <div class="box">
+              <img src="image/Chocolate.jpg" alt="" />
+              <h2 class="h-secondary center">Hot Chocolate to Die for</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="result"></div>
+
+      <div id="search_result" style="display: none">
+        <section class="Services-container">
+          <h1 class="h-primary center">Browsed Drinks</h1>
+          <div id="services_str" class="services">
+            <div class="box">
+              <img src="image/mojito.jpg" alt="" />
+              <h2 class="h-secondary center">Mojito</h2>
+            </div>
+            <div class="box">
+              <img src="image/negroni.jpg" alt="" />
+              <h2 class="h-secondary center">Negroni</h2>
+            </div>
+            <div class="box">
+              <img src="image/whiskeysour.jpg" alt="" />
+              <h2 class="h-secondary center">Whiskey Sour</h2>
+            </div>
+            <div class="box">
+              <img src="image/Daiquiri.jpg" alt="" />
+              <h2 class="h-secondary center">Daiquiri</h2>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div class="center">
+          Copyright &copy; www.thecocktaildb.com. All rights reserved!
+        </div>
+      </footer>
+
+      <!-- Script -->
+      <script type="text/javascript">
+        let result = document.getElementById("result");
+        let searchBtn = document.getElementById("search-btn");
+        let mojito = document.getElementById("mojito");
+        let navbar = document.getElementById("homeBtn");
+        let url = "https://thecocktaildb.com/api/json/v1/1/search.php?s=";
+        let getInfo = (userInp) => {
+          console.log(userInp);
+          if (userInp == null) {
+            userInp = document.getElementById("user-inp").value;
+          }
+
+          if (userInp.length == 0) {
+            // result.innerHTML = `<h3 class="msg">The input field cannot be empty</h3>`;
+          } else {
+            result.style.visibility = "visible";
+
+            document.getElementById("bydefault").style.display = "none";
+            document.getElementById("search_result").style.display = "block";
+            console.log(userInp);
+            fetch(url + userInp)
+              .then((response) => response.json())
+              .then((data) => {
+                document.getElementById("user-inp").value = "";
+                console.log(data);
+                let str = "";
+
+                data.drinks.forEach((element) => {
+                  str += `<div class="box" id="${element.strDrink}">
+                            <img src="${element.strDrinkThumb}" alt="" />
+                            <h2 class="h-secondary center">${element.strDrink}</h2>
+                          </div>`;
+                });
+                document.getElementById("services_str").innerHTML = str;
+
+                data.drinks.forEach((element) => {
+                  let drinksString = document.getElementById(element.strDrink);
+                  drinksString.addEventListener("click", () => {
+                    getInfo(element.strDrink);
+                  });
+                });
+
+                console.log(data.drinks[0]);
+                let myDrink = data.drinks[0];
+                console.log(myDrink.strDrink);
+                console.log(myDrink.strDrinkThumb);
+                console.log(myDrink.strInstructions);
+                let count = 1;
+                let ingredients = [];
+
+                for (let i in myDrink) {
+                  let ingredient = "";
+                  let measure = "";
+                  if (i.startsWith("strIngredient") && myDrink[i]) {
+                    ingredient = myDrink[i];
+                    if (myDrink[`strMeasure` + count]) {
+                      measure = myDrink[`strMeasure` + count];
+                    } else {
+                      measure = "";
+                    }
+                    count += 1;
+                    ingredients.push(`${measure} ${ingredient}`);
+                  }
+                }
+                console.log(ingredients);
+                result.innerHTML = `
+        <img src=${myDrink.strDrinkThumb}>
+        <h2>${myDrink.strDrink}</h2>
+        <h3>Ingredients:</h3>
+        <ul class="ingredients"></ul>
+        <h3>Instructions:</h3>
+        <p>${myDrink.strInstructions}</p>
+        `;
+                let ingredientsCon = document.querySelector(".ingredients");
+                ingredients.forEach((item) => {
+                  let listItem = document.createElement("li");
+                  listItem.innerText = item;
+                  ingredientsCon.appendChild(listItem);
+                });
+              })
+              .catch(() => {
+                result.innerHTML = `<h3 class="msg">Please enter a valid input</h3>`;
+              });
+          }
+        };
+        window.addEventListener("load", () => {
+          getInfo(null);
+        });
+        searchBtn.addEventListener("click", () => {
+          getInfo(null);
+        });
+        mojito.addEventListener("click", () => {
+          getInfo("mojito");
+        });
+        document.getElementById("negroni").addEventListener("click", () => {
+          getInfo("negroni");
+        });
+        document
+          .getElementById("whiskey Sour")
+          .addEventListener("click", () => {
+            getInfo("whiskey Sour");
+          });
+        document.getElementById("Daiquiri").addEventListener("click", () => {
+          getInfo("Daiquiri");
+        });
+        document.getElementById("Gin").addEventListener("click", () => {
+          getInfo("Gin");
+        });
+        document.getElementById("Vodka").addEventListener("click", () => {
+          getInfo("Vodka");
+        });
+        document.getElementById("Rum").addEventListener("click", () => {
+          getInfo("Rum");
+        });
+        document.getElementById("Tequila").addEventListener("click", () => {
+          getInfo("Tequila");
+        });
+        document.navbar.addEventListener("click", () => {
+          result.style.visibility = "hidden";
+        });
+      </script>
+      <!-- Script end -->
+
+      <!-- Script -->
+      <script type="text/javascript">
+        // let result = document.getElementById("result");
+        let randomBtn = document.getElementById("randomDrinksBtn");
+        // let navbar = document.getElementById("homeBtn");
+        let urlRandom =
+          "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+        let getInfoRandom = () => {
+          result.style.visibility = "visible";
+          fetch(urlRandom)
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("user-inp").value = "";
+              console.log(data);
+              console.log(data.drinks[0]);
+              let myDrink = data.drinks[0];
+              console.log(myDrink.strDrink);
+              console.log(myDrink.strDrinkThumb);
+              console.log(myDrink.strInstructions);
+              let count = 1;
+              let ingredients = [];
+              for (let i in myDrink) {
+                let ingredient = "";
+                let measure = "";
+                if (i.startsWith("strIngredient") && myDrink[i]) {
+                  ingredient = myDrink[i];
+                  if (myDrink[`strMeasure` + count]) {
+                    measure = myDrink[`strMeasure` + count];
+                  } else {
+                    measure = "";
+                  }
+                  count += 1;
+                  ingredients.push(`${measure} ${ingredient}`);
+                }
+              }
+              console.log(ingredients);
+              result.innerHTML = `
+        <img src=${myDrink.strDrinkThumb}>
+        <h2>${myDrink.strDrink}</h2>
+        <h3>Ingredients:</h3>
+        <ul class="ingredients"></ul>
+        <h3>Instructions:</h3>
+        <p>${myDrink.strInstructions}</p>
+        `;
+              let ingredientsCon = document.querySelector(".ingredients");
+              ingredients.forEach((item) => {
+                let listItem = document.createElement("li");
+                listItem.innerText = item;
+                ingredientsCon.appendChild(listItem);
+              });
+            })
+            .catch(() => {
+              result.innerHTML = `<h3 class="msg">Please enter a valid input</h3>`;
+            });
+        };
+        // window.addEventListener("load", getInfoRandom);
+        randomBtn.addEventListener("click", getInfoRandom);
+      </script>
+      <!-- Script end -->
+
+      <!-- Script -->
+      <script type="text/javascript">
+        // let result = document.getElementById("result");
+        let ingBtn = document.getElementById("search-ing-btn");
+        // let navbar = document.getElementById("homeBtn");
+        let urling =
+          "https://www.thecocktaildb.com/api/json/v1/1/search.php?i=";
+        let getInfoIng = () => {
+          result.style.visibility = "visible";
+          fetch(urling + document.getElementById("user-inp").value)
+            .then((response) => response.json())
+            .then((data) => {
+              document.getElementById("user-inp").value = "";
+              console.log(data);
+              console.log(data.ingredients[0]);
+              let myDrink = data.ingredients[0];
+
+              result.innerHTML = `
+        <h2>${myDrink.strIngredient}</h2>
+        <ul class="ingredients"></ul>
+        <h3>Instructions:</h3>
+        <p>${myDrink.strDescription}</p>
+        `;
+            })
+            .catch(() => {
+              result.innerHTML = `<h3 class="msg">Please enter a valid input</h3>`;
+            });
+        };
+        // window.addEventListener("load", getInfoRandom);
+        ingBtn.addEventListener("click", getInfoIng);
+      </script>
+      <!-- Script end -->
+    </div>
+  </body>
+</html>
