@@ -24,7 +24,7 @@
           <li class="item">
             <!-- <a href="file:///C:/Users/hp/Desktop/Project%202/public/api.html#"
               >API</a -->
-            <!-- > -->
+            >
           </li>
         </ul>
       </nav>
@@ -78,19 +78,19 @@
         <section class="Services-container">
           <h1 class="h-primary center">Popular Ingredients</h1>
           <div id="services">
-            <div class="box" id="Gin">
+            <div class="box" id="Gin" onclick="getIng('Gin')">
               <img src="image/Gin.png" alt="" />
               <h2 class="h-secondary center">Gin</h2>
             </div>
-            <div class="box" id="Vodka">
+            <div class="box" id="Vodka" onclick="getIng('Vodka')">
               <img src="image/Vodka.png" alt="" />
               <h2 class="h-secondary center">Vodka</h2>
             </div>
-            <div class="box" id="Rum">
+            <div class="box" id="Rum" onclick="getIng('Rum')">
               <img src="image/Rum.png" alt="" />
               <h2 class="h-secondary center">Rum</h2>
             </div>
-            <div class="box" id="Tequila">
+            <div class="box" id="Tequila" onclick="getIng('Tequila')">
               <img src="image/Tequila.png" alt="" />
               <h2 class="h-secondary center">Tequila</h2>
             </div>
@@ -278,18 +278,6 @@
         document.getElementById("Daiquiri").addEventListener("click", () => {
           getInfo("Daiquiri");
         });
-        document.getElementById("Gin").addEventListener("click", () => {
-          getInfo("Gin");
-        });
-        document.getElementById("Vodka").addEventListener("click", () => {
-          getInfo("Vodka");
-        });
-        document.getElementById("Rum").addEventListener("click", () => {
-          getInfo("Rum");
-        });
-        document.getElementById("Tequila").addEventListener("click", () => {
-          getInfo("Tequila");
-        });
         document.navbar.addEventListener("click", () => {
           result.style.visibility = "hidden";
         });
@@ -386,6 +374,47 @@
         };
         // window.addEventListener("load", getInfoRandom);
         ingBtn.addEventListener("click", getInfoIng);
+      </script>
+      <!-- Script end -->
+
+      <script type="text/javascript">
+        let getIng = (userInp) => {
+          console.log(userInp);
+          if (userInp == null) {
+            userInp = document.getElementById("user-inp").value;
+          }
+          result.style.visibility = "visible";
+          //fetch(urling + document.getElementById("user-inp").value)
+          fetch(urling + userInp)
+            .then((response) => response.json())
+            .then((data) => {
+              // console.log(data);
+              // console.log(data.ingredients[0]);
+              let myDrink = data.ingredients[0];
+
+              result.innerHTML = `
+        <h2>${myDrink.strIngredient}</h2>
+        <ul class="ingredients"></ul>
+        <h3>Instructions:</h3>
+        <p>${myDrink.strDescription}</p>
+        `;
+            })
+            .catch(() => {
+              result.innerHTML = `<h3 class="msg">Please enter a valid input</h3>`;
+            });
+        };
+        // document.getElementById("Gin").addEventListener("click", () => {
+        //   getIng("Gin");
+        // });
+        // document.getElementById("Vodka").addEventListener("click", () => {
+        //   getIng("Vodka");
+        // });
+        // document.getElementById("Rum").addEventListener("click", () => {
+        //   getIng("Rum");
+        // });
+        // document.getElementById("Tequila").addEventListener("click", () => {
+        //   getIng("Tequila");
+        // });
       </script>
       <!-- Script end -->
     </div>
